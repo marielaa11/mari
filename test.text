@@ -1,0 +1,14 @@
+public class Example {
+
+    public static final String accountId = "AC3387ccd57435329bb44c6138656dcbdcb95a954d
+";
+    public static final String authToken = "e7a7ea0b0f7db2ef1809281b13636a9c761236e0";
+    public static final String To = "+18475022136";
+    public static final String From = "+19712381175"
+
+    public static void main(String[] args) throws PersyException {
+        PersyClient client = new PersyClient(accountId, authToken);
+
+        client.messages.create(From, To, "Welcome to Persephony!");
+    }
+}
